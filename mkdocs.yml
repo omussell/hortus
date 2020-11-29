@@ -1,9 +1,19 @@
 site_name: "VITA"
 theme:
   name: "material"
+  palette:
+    primary: green
+    accent: light green
+  features:
+    - navigation.instant
+    - navigation.tabs
+
+nav:
+    - Overview: overview.md
+    - Zero Waste: zerowaste.md
+    - Vegan: vegan.md
 
 plugins:
-  #- search
   - mkdocstrings
 
 markdown_extensions:
