@@ -6,12 +6,15 @@ theme:
     accent: light green
   features:
     - navigation.instant
-    - navigation.tabs
+    #- navigation.tabs
 
 nav:
-    - Overview: overview.md
-    - Zero Waste: zerowaste.md
-    - Vegan: vegan.md
+    - Home: index.md
+    - Blog:
+        #- "3 R's": rrr.md
+        - "Reactors, Robots & Rockets": rrr.md
+        - Zero Waste: zerowaste.md
+        - Vegan: vegan.md
 
 plugins:
   - mkdocstrings
