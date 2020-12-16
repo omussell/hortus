@@ -1,4 +1,4 @@
-# VITA
+# HORTUS 
 
 Tool to generate example forest garden layouts
 
@@ -21,10 +21,7 @@ Web app with buttons to generate
 - Application is responsible for generating the grid locations for each plant, then its up to the frontend to decide how to display it.
 - Bulma CSS framework for building frontend
 - Django? or FastAPI? or FastAPI proto with Go prod?
-- Use zas for https://github.com/imdario/zas:
-    - docs generation?
-    - frontend along with bulma?
-    - it might just be a wrapper around blackfriday, could maybe just do own thing
+- Wont do - Seaweed app like vertical ocean farming. This can be done later or as a second app.
 
 ## Design stages
 
