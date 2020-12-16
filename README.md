@@ -1,4 +1,4 @@
-# VITA
+# HORTUS
 
 Tool to generate example forest garden layouts
 

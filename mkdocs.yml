@@ -10,6 +10,7 @@ theme:
 
 nav:
     - Home: index.md
+    - Design Stages: design-stages.md
     - Blog:
         #- "3 R's": rrr.md
         - "Reactors, Robots & Rockets": rrr.md

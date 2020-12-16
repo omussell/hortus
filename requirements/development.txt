@@ -1,3 +1,5 @@
+-r production.txt
+
 bandit
 black
 docformatter
@@ -9,6 +11,7 @@ flake8-commas
 flake8-debugger
 flake8-docstrings
 flake8-isort
+flake8-polyfill
 flake8-quotes
 flake8-sfs
 ipdb

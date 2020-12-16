@@ -1,2 +1,8 @@
+alembic
+databases[sqlite]
+fastapi
 httpx
-django
+orm~=0.1
+python-dotenv
+sqlalchemy
+uvicorn

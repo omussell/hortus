@@ -21,6 +21,8 @@ Web app with buttons to generate
 - Application is responsible for generating the grid locations for each plant, then its up to the frontend to decide how to display it.
 - Bulma CSS framework for building frontend
 - Django? or FastAPI? or FastAPI proto with Go prod?
+- Maybe instead of layers it could be 3 separate images, one for each layer. Then they could be side-by-side. Or overlaid, depends on the frontend.
+- Label the circles underneath with an ID number, then have a key at the side that says the plant name and a link to a page which describes all aspects about that plant.
 - Wont do - Seaweed app like vertical ocean farming. This can be done later or as a second app.
 
 ## Design stages
