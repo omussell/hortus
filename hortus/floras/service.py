@@ -21,12 +21,11 @@ async def get(flora: FloraRead) -> Optional[Flora]:
 async def create(flora_create: FloraCreate) -> Flora:
     """Create a Flora."""
     related_classification = await Classification.objects.get(
-        name=flora_create.classification
+        name=flora_create.classification.name
     )
     flora = await Flora.objects.create(
         classification=related_classification,
-        text=flora_create.text,
-        completed=flora_create.completed,
+        name=flora_create.name,
     )
     return flora
 
@@ -37,8 +36,7 @@ async def update(flora_update: FloraUpdate) -> Flora:
     related_classification = await Classification.objects.get(name=flora.classification)
     await flora.update(
         classification=related_classification,
-        text=flora_update.text,
-        completed=flora_update.completed,
+        name=flora_update.name,
     )
     return flora
 
