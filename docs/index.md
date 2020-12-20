@@ -7,6 +7,8 @@ Tool to generate example forest garden layouts
 
 Web app with buttons to generate
 
+Initial landing page explains what a forest garden is. It also explains what this app does, namely, you give it your grid dimensions an choose some options, then it returns a graphic showing your generated garden, with a time slider so you can see the differences over time. Also shows the different layers: ground-cover, shrubs, canopy.
+
 
 ## MSCW
 
@@ -24,17 +26,15 @@ Web app with buttons to generate
 - Maybe instead of layers it could be 3 separate images, one for each layer. Then they could be side-by-side. Or overlaid, depends on the frontend.
 - Label the circles underneath with an ID number, then have a key at the side that says the plant name and a link to a page which describes all aspects about that plant.
 - Wont do - Seaweed app like vertical ocean farming. This can be done later or as a second app.
+- JAMStack - static frontend, fastapi backend, SSG.
+https://github.com/getpelican/pelican-themes/tree/master/bricks
+- For generating output, we can use the GIS libraries. These handle coordinate systems and drawing shapes onto them.
+    - GDAL
+    - Fiona
+    - Shapely - Converts the shapefile into an image
+    - GeoJSON
 
-## Design stages
 
-- Decide on the speed of planting and succession stages
-- Design windbreak/hedges and edges
-- Design the canopy layer
-- Design the shrub layer
-- Design the perrenial/ground-cover layer
-- Design the annuals, biennials and climbers
-- Design the nitrogen fixers
-- Design clearings, living spaces and paths
 
 ## Plant information
 
@@ -58,7 +58,7 @@ This indicates the shadiest conditions that a plant will grow happily in and per
 - Tolerates light shade
 - Tolerates moderate shade
 - Tolerates fairly deep shade
-- TOlerates deep shade beneath evergreen trees and shrubs
+- Tolerates deep shade beneath evergreen trees and shrubs
 
 ### Performance ratings
 This indicates how well the plant performs in a forest garden, how well it grows and crops.

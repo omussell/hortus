@@ -24,3 +24,4 @@ mkdocstrings
 mypy
 pydocstyle
 radon
+
