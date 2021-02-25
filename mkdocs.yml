@@ -1,6 +1,7 @@
 site_name: "HORTUS"
 theme:
   name: "material"
+  font: false
   palette:
     primary: green
     accent: light green
@@ -10,15 +11,22 @@ theme:
 
 nav:
     - Home: index.md
+    - Plant Information: plant-info.md
     - Design Stages: design-stages.md
     - Blog:
         #- "3 R's": rrr.md
-        - "Reactors, Robots & Rockets": rrr.md
+        - "Robots, Reactors & Rockets": rrr.md
+        - "Food, Forests & Freedom": fff.md
         - Zero Waste: zerowaste.md
         - Vegan: vegan.md
 
 plugins:
   - mkdocstrings
+  - minify:
+      minify_html: true
+      minify_js: true
+      htmlmin_opts:
+          remove_comments: true
 
 markdown_extensions:
   - toc:

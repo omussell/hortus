@@ -20,6 +20,7 @@ isort
 lizard
 mkdocs
 mkdocs-material
+mkdocs-minify-plugin
 mkdocstrings
 mypy
 pydocstyle
