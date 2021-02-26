@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://omussell.github.io/olla/sitemap.xml
+Sitemap: https://omussell.github.io/hortus/sitemap.xml
