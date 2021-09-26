@@ -11,7 +11,7 @@ Django + Postgresql + Redis + NGINX Unit
 
 Write the documentation and text on the website from a gardeners perspective, not an IT one. Someone wanting a garden layout doesnt care that its written in X programming language using X framework.
 
-- Deployment in docker
+- Deployment in docker. Probably overkill. DO droplet or linode VM, smallest size. Alpine, ansible, deploy with rsync script, ping Unit to load new app.
 - Look more into DRF, need to see how it works
     - Do you even necessarily need DRF? It doesnt need to be a REST/API backend if django is rendering the frontend.
 - Look into how to generate SVG images (imagemagick?)
