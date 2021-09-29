@@ -24,5 +24,6 @@ mkdocs-minify-plugin
 mkdocstrings
 mypy
 pydocstyle
+pytest
 radon
 
