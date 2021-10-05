@@ -1,1 +1,4 @@
-django
+fastapi
+sqlmodel
+alembic
+uvicorn

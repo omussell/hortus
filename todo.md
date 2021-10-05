@@ -1,4 +1,15 @@
-- Set up django to load the initial landing page
+- Create scaffold for project:
+    - Scripts to run mypy/black/isort
+    - Initial barebones FastAPI app
+    - Initial SQLModel models
+    - Initial alembic migrations
+    - Initial frontend setup
+    - Documentation build
+    - Dockerfile
+    - Skaffold config
+    - K8s deployment config
+
+- Set up to load the initial landing page
 - Figure out how to generate an image using python
 - Add models and db stuff to store initial test data
 - Generate an image using all the test data, no logic to layout nicely

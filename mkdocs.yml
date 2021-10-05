@@ -23,11 +23,6 @@ nav:
 
 plugins:
   - mkdocstrings
-  - minify:
-      minify_html: true
-      minify_js: true
-      htmlmin_opts:
-          remove_comments: true
 
 markdown_extensions:
   - toc:
