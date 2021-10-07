@@ -7,7 +7,18 @@ To start off with it will just be the API backend and a HTTP client as the front
 
 Send HTTP POST to URL, it returns a Forest Garden layout
 
-Tech stack: NextJS/Typescript + FastAPI/SQLModel + Postgresql + Redis + NGINX Unit
+Tech stack: 
+    - Frontend: 
+        - NextJS
+        - Typescript
+        - Tailwind CSS 
+    - Backend:
+        - FastAPI
+        - SQLModel
+        - Celery
+        - RabbitMQ
+        - Postgresql
+
 
 Write the documentation and text on the website from a gardeners perspective, not an IT one. Someone wanting a garden layout doesnt care that its written in X programming language using X framework.
 
