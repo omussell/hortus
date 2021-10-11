@@ -40,7 +40,15 @@ export default {
 	},
 	plugins: [
 		svelte({
-			preprocess: sveltePreprocess({ sourceMap: !production }),
+			preprocess: sveltePreprocess({ 
+				sourceMap: !production,
+				postcss: {
+				  plugins: [
+				   require("tailwindcss"), 
+				   require("autoprefixer"),
+				  ],
+				},
+			}),
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production
@@ -76,6 +84,7 @@ export default {
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
 		production && terser()
+
 	],
 	watch: {
 		clearScreen: false
