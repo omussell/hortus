@@ -6,7 +6,7 @@ from sqlalchemy import pool
 import config as local_config
 from alembic import context
 from sqlmodel.main import SQLModel
-from db.models import Hero
+from db.models import Plant
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
