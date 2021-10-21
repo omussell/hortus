@@ -1,3 +1,4 @@
+- Before even writing any code, write some more detailed notes on the vision and what this is going to achieve. Maybe do this in the documentation site. (Hugo? https://themes.gohugo.io/themes/hugo-book/)
 - Create scaffold for project:
     - Scripts to run formatting/linting
     - Initial barebones Go app
