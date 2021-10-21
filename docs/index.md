@@ -6,24 +6,23 @@ To start off with it will just be the API backend and a HTTP client as the front
 
 
 Send HTTP POST to URL, it returns a Forest Garden layout
+Maybe just coordinates and data to start with, not an actual image
 
 Tech stack: 
     - Frontend: 
-        - NextJS
+        - Svelte
         - Typescript
         - Tailwind CSS 
     - Backend:
-        - FastAPI
-        - SQLModel
-        - Celery
-        - RabbitMQ
+        - Go
+        - sqlc + pgx
         - Postgresql
 
 
 Write the documentation and text on the website from a gardeners perspective, not an IT one. Someone wanting a garden layout doesnt care that its written in X programming language using X framework.
 
-- Deployment in docker. Probably overkill. DO droplet or linode VM, smallest size. Alpine, ansible, deploy with rsync script, ping Unit to load new app.
-- Look into how to generate SVG images (imagemagick? pillow/PIL)
+- Deployment in docker. Ping Unit to load new app.
+- Look into how to generate SVG images
 - Think about design of the frontend, how will it look? Buttons and sliders then click submit?
     - How to handle scale? Need to set max limit on size otherwise it wont fit on screen and take loads of CPU time.
     - Maybe set reasonable limits and just say if you need bigger then run it multiple times and join them up yourself.
@@ -35,7 +34,6 @@ Write the documentation and text on the website from a gardeners perspective, no
     - Light, wind, water
     - Plants relationships to one another
     - geographic location - will determine sun location, average temperature, hardiness zones
-- Consider if you want to split up the alembic migrations into separate folders, similar to what django does. otherwise its just one folder with all the different migrations in.
 
 ## MSCW
 
