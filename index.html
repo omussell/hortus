@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mscw" class="md-skip">
+        <a href="#tool-to-generate-forest-garden-designs" class="md-skip">
           Skip to content
         </a>
       
@@ -185,6 +185,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Home
@@ -200,12 +202,76 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tech-stack" class="md-nav__link">
+    Tech stack:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development" class="md-nav__link">
+    Development
+  </a>
+  
+    <nav class="md-nav" aria-label="Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1" class="md-nav__link">
+    Phase 1:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2" class="md-nav__link">
+    Phase 2:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3" class="md-nav__link">
+    Phase 3:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4" class="md-nav__link">
+    Phase 4:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-5" class="md-nav__link">
+    Phase 5:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#mscw" class="md-nav__link">
@@ -358,12 +424,76 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tech-stack" class="md-nav__link">
+    Tech stack:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development" class="md-nav__link">
+    Development
+  </a>
+  
+    <nav class="md-nav" aria-label="Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1" class="md-nav__link">
+    Phase 1:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2" class="md-nav__link">
+    Phase 2:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3" class="md-nav__link">
+    Phase 3:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4" class="md-nav__link">
+    Phase 4:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-5" class="md-nav__link">
+    Phase 5:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#mscw" class="md-nav__link">
@@ -385,44 +515,62 @@
               
                 
                 
-                  <h1>Home</h1>
-                
-                <p>Tool to generate forest garden layouts</p>
+                <h1 id="tool-to-generate-forest-garden-designs">Tool to generate forest garden designs<a class="headerlink" href="#tool-to-generate-forest-garden-designs" title="Permanent link">&para;</a></h1>
 <p>Desired end goal is to have a web app which lets you select certain parameters, then when you click generate, it returns the layout for a forest garden according to your parameters.</p>
 <p>To start off with it will just be the API backend and a HTTP client as the frontend.</p>
 <p>Send HTTP POST to URL, it returns a Forest Garden layout
 Maybe just coordinates and data to start with, not an actual image
 Dont need Frontend tech like react/angular/svelte etc. Just use HTML and templating to create a basic page and render it on the server.</p>
-<p>Tech stack: 
-    - Frontend: 
-        - Svelte
-        - Typescript
-        - Tailwind CSS 
-        or
-        - generated from backend
-    - Backend:
-        - Go
-        - sqlc + pgx
-        - Postgresql</p>
-<p>Phase 1:
-- Project bootstrapping
-    - Documentation generation
-    - Initial Hello world code
-    - Able to connect to database
-    - Database schema migrations and SQL generation
-    - Config/settings file
-    - Able to deploy for testing</p>
-<p>Phase 2:
-- Can send/receive HTTP requests to HTTP server
-- HTTP server can connect to database and return test data
-- No processing of the data</p>
-<p>Phase 3:
-- Working API backend which when sending a request with a HTTP client, returns a JSON response which describes a basic garden layout and plant attributes.
-- Backend can determine basic relationships between plants from test data</p>
-<p>Phase 4:
-- More sophisticated methods for determining relationships between plants from test data</p>
-<p>Phase 5:
-- API backend returns generated basic images instead of JSON data</p>
+<h2 id="tech-stack">Tech stack:<a class="headerlink" href="#tech-stack" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Frontend: <ul>
+<li>Svelte</li>
+<li>Typescript</li>
+<li>Tailwind CSS 
+or</li>
+<li>generated from backend</li>
+</ul>
+</li>
+<li>Backend:<ul>
+<li>Go</li>
+<li>sqlc + pgx</li>
+<li>Postgresql</li>
+</ul>
+</li>
+</ul>
+<h2 id="development">Development<a class="headerlink" href="#development" title="Permanent link">&para;</a></h2>
+<h3 id="phase-1">Phase 1:<a class="headerlink" href="#phase-1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Project bootstrapping<ul>
+<li>Documentation generation</li>
+<li>Initial Hello world code</li>
+<li>Able to connect to database</li>
+<li>Database schema migrations and SQL generation</li>
+<li>Config/settings file</li>
+<li>Able to deploy for testing</li>
+</ul>
+</li>
+</ul>
+<h3 id="phase-2">Phase 2:<a class="headerlink" href="#phase-2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Can send/receive HTTP requests to HTTP server</li>
+<li>HTTP server can connect to database and return test data</li>
+<li>No processing of the data</li>
+</ul>
+<h3 id="phase-3">Phase 3:<a class="headerlink" href="#phase-3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Working API backend which when sending a request with a HTTP client, returns a JSON response which describes a basic garden layout and plant attributes.</li>
+<li>Backend can determine basic relationships between plants from test data</li>
+</ul>
+<h3 id="phase-4">Phase 4:<a class="headerlink" href="#phase-4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>More sophisticated methods for determining relationships between plants from test data</li>
+</ul>
+<h3 id="phase-5">Phase 5:<a class="headerlink" href="#phase-5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>API backend returns generated basic images instead of JSON data</li>
+</ul>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <p>Write the documentation and text on the website from a gardeners perspective, not an IT one. Someone wanting a garden layout doesnt care that its written in X programming language using X framework.</p>
 <ul>
 <li>Deployment to server running NGINX Unit. SCP new binary to server. Ping Unit to load new app.</li>
