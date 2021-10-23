@@ -1,4 +1,4 @@
-Tool to generate forest garden layouts
+# Tool to generate forest garden designs
 
 Desired end goal is to have a web app which lets you select certain parameters, then when you click generate, it returns the layout for a forest garden according to your parameters.
 
@@ -9,19 +9,23 @@ Send HTTP POST to URL, it returns a Forest Garden layout
 Maybe just coordinates and data to start with, not an actual image
 Dont need Frontend tech like react/angular/svelte etc. Just use HTML and templating to create a basic page and render it on the server.
 
-Tech stack: 
-    - Frontend: 
-        - Svelte
-        - Typescript
-        - Tailwind CSS 
-        or
-        - generated from backend
-    - Backend:
-        - Go
-        - sqlc + pgx
-        - Postgresql
+## Tech stack: 
 
-Phase 1:
+- Frontend: 
+    - Svelte
+    - Typescript
+    - Tailwind CSS 
+    or
+    - generated from backend
+- Backend:
+    - Go
+    - sqlc + pgx
+    - Postgresql
+
+## Development 
+
+### Phase 1:
+
 - Project bootstrapping
     - Documentation generation
     - Initial Hello world code
@@ -30,21 +34,26 @@ Phase 1:
     - Config/settings file
     - Able to deploy for testing
 
-Phase 2:
+### Phase 2:
+
 - Can send/receive HTTP requests to HTTP server
 - HTTP server can connect to database and return test data
 - No processing of the data
 
-Phase 3:
+### Phase 3:
+
 - Working API backend which when sending a request with a HTTP client, returns a JSON response which describes a basic garden layout and plant attributes.
 - Backend can determine basic relationships between plants from test data
 
-Phase 4:
+### Phase 4:
+
 - More sophisticated methods for determining relationships between plants from test data
 
-Phase 5:
+### Phase 5:
+
 - API backend returns generated basic images instead of JSON data
 
+## Notes
 Write the documentation and text on the website from a gardeners perspective, not an IT one. Someone wanting a garden layout doesnt care that its written in X programming language using X framework.
 
 - Deployment to server running NGINX Unit. SCP new binary to server. Ping Unit to load new app.
