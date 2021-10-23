@@ -21,9 +21,6 @@ nav:
         - Zero Waste: blog/zerowaste.md
         - Vegan: blog/vegan.md
 
-plugins:
-  - mkdocstrings
-
 markdown_extensions:
   - toc:
       permalink: True

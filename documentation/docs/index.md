@@ -7,21 +7,47 @@ To start off with it will just be the API backend and a HTTP client as the front
 
 Send HTTP POST to URL, it returns a Forest Garden layout
 Maybe just coordinates and data to start with, not an actual image
+Dont need Frontend tech like react/angular/svelte etc. Just use HTML and templating to create a basic page and render it on the server.
 
 Tech stack: 
     - Frontend: 
         - Svelte
         - Typescript
         - Tailwind CSS 
+        or
+        - generated from backend
     - Backend:
         - Go
         - sqlc + pgx
         - Postgresql
 
+Phase 1:
+- Project bootstrapping
+    - Documentation generation
+    - Initial Hello world code
+    - Able to connect to database
+    - Database schema migrations and SQL generation
+    - Config/settings file
+    - Able to deploy for testing
+
+Phase 2:
+- Can send/receive HTTP requests to HTTP server
+- HTTP server can connect to database and return test data
+- No processing of the data
+
+Phase 3:
+- Working API backend which when sending a request with a HTTP client, returns a JSON response which describes a basic garden layout and plant attributes.
+- Backend can determine basic relationships between plants from test data
+
+Phase 4:
+- More sophisticated methods for determining relationships between plants from test data
+
+Phase 5:
+- API backend returns generated basic images instead of JSON data
 
 Write the documentation and text on the website from a gardeners perspective, not an IT one. Someone wanting a garden layout doesnt care that its written in X programming language using X framework.
 
-- Deployment in docker. Ping Unit to load new app.
+- Deployment to server running NGINX Unit. SCP new binary to server. Ping Unit to load new app.
 - Look into how to generate SVG images
 - Think about design of the frontend, how will it look? Buttons and sliders then click submit?
     - How to handle scale? Need to set max limit on size otherwise it wont fit on screen and take loads of CPU time.
