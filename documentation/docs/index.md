@@ -22,6 +22,7 @@ Maybe just coordinates and data to start with, not an actual image
     or
     - FastAPI
     - SQLModel
+    - Celery + Redis
 - Database:
     - Postgresql
 
