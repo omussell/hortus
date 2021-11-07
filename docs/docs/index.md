@@ -14,12 +14,12 @@ Maybe just coordinates and data to start with, not an actual image
     - Svelte
     - Typescript
     - Tailwind CSS 
-    or
+        - or
     - generated from backend
 - Backend:
     - Go
     - sqlc + pgx
-    or
+        - or
     - FastAPI
     - SQLModel
     - Celery + Redis
@@ -41,19 +41,31 @@ Maybe just coordinates and data to start with, not an actual image
     - Initial Hello world code
     - Config/settings file
     - Able to deploy for testing
-    - Able to generate basic HTML from template
     - Able to generate a basic image
 
 ### Phase 2:
 
 - Can send/receive HTTP requests to HTTP server
-- Able to connect to database
-- Database schema migrations and SQL generation
-- HTTP server can connect to database and return test data
-- No processing of the data
+- HTTP server can return test data from app
+- Simple processing of the data
+
+2 separate areas:
+
+- image generation
+    - algos to determine plant locations
+    - retrieve plant information
+- which image to get, based on info from client
+
+focus on image generation first
+
+does the plant data even need to be in a database?
+probably should when there are lots of plants
 
 ### Phase 3:
 
+- Able to connect to database
+- Database schema migrations and SQL generation
+- HTTP server can connect to database and return test data
 - Working API backend which when sending a request with a HTTP client, returns a JSON response which describes a basic garden layout and plant attributes.
 - Backend can determine basic relationships between plants from test data
 
