@@ -7,7 +7,6 @@ To start off with it will just be the API backend and a HTTP client as the front
 
 Send HTTP POST to URL, it returns a Forest Garden layout
 Maybe just coordinates and data to start with, not an actual image
-Dont need Frontend tech like react/angular/svelte etc. Just use HTML and templating to create a basic page and render it on the server.
 
 ## Tech stack: 
 
@@ -20,23 +19,35 @@ Dont need Frontend tech like react/angular/svelte etc. Just use HTML and templat
 - Backend:
     - Go
     - sqlc + pgx
+    or
+    - FastAPI
+    - SQLModel
+- Database:
     - Postgresql
 
 ## Development 
+
+### Sketch
+
+- Write short document explaining what the app is and what it does
+- Create initial wireframes for pages
+    - The main content should be at the center of the page so it has most focus
 
 ### Phase 1:
 
 - Project bootstrapping
     - Documentation generation
     - Initial Hello world code
-    - Able to connect to database
-    - Database schema migrations and SQL generation
     - Config/settings file
     - Able to deploy for testing
+    - Able to generate basic HTML from template
+    - Able to generate a basic image
 
 ### Phase 2:
 
 - Can send/receive HTTP requests to HTTP server
+- Able to connect to database
+- Database schema migrations and SQL generation
 - HTTP server can connect to database and return test data
 - No processing of the data
 
@@ -53,11 +64,19 @@ Dont need Frontend tech like react/angular/svelte etc. Just use HTML and templat
 
 - API backend returns generated basic images instead of JSON data
 
+### Future
+
+- Range slider which displays the growth over time of the forest garden
+- Expand to larger land area
+- Expand variety of plants
+- Different geographic regions than just UK
+
 ## Notes
 Write the documentation and text on the website from a gardeners perspective, not an IT one. Someone wanting a garden layout doesnt care that its written in X programming language using X framework.
 
 - Deployment to server running NGINX Unit. SCP new binary to server. Ping Unit to load new app.
 - Look into how to generate SVG images
+    - SVG are text. If we minify and compress them, could we serve them direct from a HTTP cache in front rather than storing them in object storage.
 - Think about design of the frontend, how will it look? Buttons and sliders then click submit?
     - How to handle scale? Need to set max limit on size otherwise it wont fit on screen and take loads of CPU time.
     - Maybe set reasonable limits and just say if you need bigger then run it multiple times and join them up yourself.

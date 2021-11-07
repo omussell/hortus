@@ -1,8 +1,8 @@
-- Before even writing any code, write some more detailed notes on the vision and what this is going to achieve. Maybe do this in the documentation site. (Hugo? https://themes.gohugo.io/themes/hugo-book/)
+- Before even writing any code, write some more detailed notes on the vision and what this is going to achieve. Maybe do this in the documentation site. 
 - Create scaffold for project:
     - Scripts to run formatting/linting
-    - Initial barebones Go app
-    - Initial sqlc models
+    - Initial barebones app
+    - Initial models
     - Initial db migrations
     - Documentation build
 
@@ -19,6 +19,3 @@
     - k3s
     - kaniko for building images
     - skaffold for build control
-
-
-- Test idea of storing plant info in DB, but their interactions with other plants (which is the maths stuff) in starlark files. Each plant is going to be different. Starlark language is simple but compiles easily. Could have common functions like spirals etc. which are imported.
