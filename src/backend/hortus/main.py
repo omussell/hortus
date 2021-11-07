@@ -1,13 +1,17 @@
 from typing import Optional
 
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
+
+from image.generation import generate_image
 
 app = FastAPI()
 
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    img = generate_image()
+    return FileResponse("my_image.png")
 
 
 @app.get("/items/{item_id}")

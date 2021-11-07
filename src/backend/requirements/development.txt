@@ -3,8 +3,5 @@
 black
 ipython
 isort
-mkdocs
-mkdocs-material
-mkdocstrings
 mypy
 pytest

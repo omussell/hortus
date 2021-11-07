@@ -1,6 +1,8 @@
 fastapi
-sqlmodel
-alembic
+#sqlmodel
+#alembic
 uvicorn
 python-dotenv
+pydantic
 pillow
+#psycopg
