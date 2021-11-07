@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="images/leaf.svg">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.3f5d1f46.min.css">
@@ -198,6 +198,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -225,6 +227,13 @@
   
     <nav class="md-nav" aria-label="Development">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sketch" class="md-nav__link">
+    Sketch
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#phase-1" class="md-nav__link">
@@ -257,6 +266,13 @@
           <li class="md-nav__item">
   <a href="#phase-5" class="md-nav__link">
     Phase 5:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future" class="md-nav__link">
+    Future
   </a>
   
 </li>
@@ -420,6 +436,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -447,6 +465,13 @@
   
     <nav class="md-nav" aria-label="Development">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sketch" class="md-nav__link">
+    Sketch
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#phase-1" class="md-nav__link">
@@ -479,6 +504,13 @@
           <li class="md-nav__item">
   <a href="#phase-5" class="md-nav__link">
     Phase 5:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future" class="md-nav__link">
+    Future
   </a>
   
 </li>
@@ -519,46 +551,78 @@
 <p>Desired end goal is to have a web app which lets you select certain parameters, then when you click generate, it returns the layout for a forest garden according to your parameters.</p>
 <p>To start off with it will just be the API backend and a HTTP client as the frontend.</p>
 <p>Send HTTP POST to URL, it returns a Forest Garden layout
-Maybe just coordinates and data to start with, not an actual image
-Dont need Frontend tech like react/angular/svelte etc. Just use HTML and templating to create a basic page and render it on the server.</p>
+Maybe just coordinates and data to start with, not an actual image</p>
 <h2 id="tech-stack">Tech stack:<a class="headerlink" href="#tech-stack" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Frontend: <ul>
 <li>Svelte</li>
 <li>Typescript</li>
-<li>Tailwind CSS 
-or</li>
+<li>Tailwind CSS <ul>
+<li>or</li>
+</ul>
+</li>
 <li>generated from backend</li>
 </ul>
 </li>
 <li>Backend:<ul>
 <li>Go</li>
-<li>sqlc + pgx</li>
+<li>sqlc + pgx<ul>
+<li>or</li>
+</ul>
+</li>
+<li>FastAPI</li>
+<li>SQLModel</li>
+<li>Celery + Redis</li>
+</ul>
+</li>
+<li>Database:<ul>
 <li>Postgresql</li>
 </ul>
 </li>
 </ul>
 <h2 id="development">Development<a class="headerlink" href="#development" title="Permanent link">&para;</a></h2>
+<h3 id="sketch">Sketch<a class="headerlink" href="#sketch" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Write short document explaining what the app is and what it does</li>
+<li>Create initial wireframes for pages<ul>
+<li>The main content should be at the center of the page so it has most focus</li>
+</ul>
+</li>
+</ul>
 <h3 id="phase-1">Phase 1:<a class="headerlink" href="#phase-1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Project bootstrapping<ul>
 <li>Documentation generation</li>
 <li>Initial Hello world code</li>
-<li>Able to connect to database</li>
-<li>Database schema migrations and SQL generation</li>
 <li>Config/settings file</li>
 <li>Able to deploy for testing</li>
+<li>Able to generate a basic image</li>
 </ul>
 </li>
 </ul>
 <h3 id="phase-2">Phase 2:<a class="headerlink" href="#phase-2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Can send/receive HTTP requests to HTTP server</li>
-<li>HTTP server can connect to database and return test data</li>
-<li>No processing of the data</li>
+<li>HTTP server can return test data from app</li>
+<li>Simple processing of the data</li>
 </ul>
+<p>2 separate areas:</p>
+<ul>
+<li>image generation<ul>
+<li>algos to determine plant locations</li>
+<li>retrieve plant information</li>
+</ul>
+</li>
+<li>which image to get, based on info from client</li>
+</ul>
+<p>focus on image generation first</p>
+<p>does the plant data even need to be in a database?
+probably should when there are lots of plants</p>
 <h3 id="phase-3">Phase 3:<a class="headerlink" href="#phase-3" title="Permanent link">&para;</a></h3>
 <ul>
+<li>Able to connect to database</li>
+<li>Database schema migrations and SQL generation</li>
+<li>HTTP server can connect to database and return test data</li>
 <li>Working API backend which when sending a request with a HTTP client, returns a JSON response which describes a basic garden layout and plant attributes.</li>
 <li>Backend can determine basic relationships between plants from test data</li>
 </ul>
@@ -570,11 +634,21 @@ or</li>
 <ul>
 <li>API backend returns generated basic images instead of JSON data</li>
 </ul>
+<h3 id="future">Future<a class="headerlink" href="#future" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Range slider which displays the growth over time of the forest garden</li>
+<li>Expand to larger land area</li>
+<li>Expand variety of plants</li>
+<li>Different geographic regions than just UK</li>
+</ul>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <p>Write the documentation and text on the website from a gardeners perspective, not an IT one. Someone wanting a garden layout doesnt care that its written in X programming language using X framework.</p>
 <ul>
 <li>Deployment to server running NGINX Unit. SCP new binary to server. Ping Unit to load new app.</li>
-<li>Look into how to generate SVG images</li>
+<li>Look into how to generate SVG images<ul>
+<li>SVG are text. If we minify and compress them, could we serve them direct from a HTTP cache in front rather than storing them in object storage.</li>
+</ul>
+</li>
 <li>Think about design of the frontend, how will it look? Buttons and sliders then click submit?<ul>
 <li>How to handle scale? Need to set max limit on size otherwise it wont fit on screen and take loads of CPU time.</li>
 <li>Maybe set reasonable limits and just say if you need bigger then run it multiple times and join them up yourself.</li>
@@ -661,10 +735,10 @@ or</li>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>
