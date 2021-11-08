@@ -11,7 +11,8 @@ app = FastAPI()
 @app.get("/")
 def read_root():
     img = generate_image()
-    return FileResponse("my_image.png")
+    #return FileResponse("my_image.png")
+    return FileResponse("my_other_image.png")
 
 
 @app.get("/items/{item_id}")
