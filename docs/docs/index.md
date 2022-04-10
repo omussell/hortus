@@ -60,8 +60,6 @@ you have to move around manually. Might need to do the image in layers, like tre
 jinja2 for templating? https://fastapi.tiangolo.com/advanced/templates/
  use NGINX cache to cache the generated SVG files (compress/minify them first anyway) https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/
 
-switch docs to doctave
-
 ### Phase 3:
 
 - Able to connect to database
