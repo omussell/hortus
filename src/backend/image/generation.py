@@ -59,4 +59,70 @@ def generate_image():
         context.stroke()
         surface.write_to_png("my_other_image.png")
 
+    from math import pi
+    from cairo import SVGSurface, Context, Matrix
+
+    #WIDTH = 6 * 72
+    #HEIGHT = 4 * 72
+    WIDTH = 6 * 100
+    HEIGHT = 4 * 100
+
+    s = SVGSurface('example1.svg', WIDTH, HEIGHT)
+    c = Context(s)
+
+    # Transform to normal cartesian coordinate system
+    m = Matrix(yy=-1, y0=HEIGHT)
+    c.transform(m)
+
+    # Set a background color
+    c.save()
+    c.set_source_rgb(0.3, 0.3, 1.0)
+    c.paint()
+    c.restore()
+
+    c.move_to(0, 0)
+    i = 1
+    #while i < 10:
+    #    c.line_to(2 + i * 72,i * 72)
+    #    i += 1
+    a, b = 2, 1
+    while b < 10:
+        a, b = b, a+b
+        c.line_to(a * 20, b * 20)
+    #c.line_to(3 * 72,4 * 72)
+    c.close_path()
+    c.save()
+    c.set_line_width(6.0)
+    c.stroke_preserve()
+    c.set_source_rgb(0.3, 0.8, 0.9)
+    c.fill()
+    c.restore()
+
+    # Draw some lines
+    c.move_to(0, 0)
+    c.line_to(2 * 72, 2 * 72)
+    c.line_to(3 * 72, 1 * 72)
+    c.line_to(4 * 72, 2 * 72)
+    c.line_to(6 * 72, 0)
+    c.close_path()
+    c.save()
+    c.set_line_width(6.0)
+    c.stroke_preserve()
+    c.set_source_rgb(0.3, 0.3, 0.3)
+    c.fill()
+    c.restore()
+
+    # Draw a circle
+    c.save()
+    c.set_line_width(6.0)
+    c.arc(1 * 72, 3 * 72, 0.5 * 72, 0, 2 * pi)
+    c.stroke_preserve()
+    c.set_source_rgb(1.0, 1.0, 0)
+    c.fill()
+    c.restore()
+
+    # Save as a SVG and PNG
+    s.write_to_png('example1.png')
+    s.finish()
+
 # https://en.wikipedia.org/wiki/Cartesian_tree

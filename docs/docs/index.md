@@ -61,6 +61,14 @@ focus on image generation first
 does the plant data even need to be in a database?
 probably should when there are lots of plants
 
+can generate SVG with pycairo. Dont need to convert to PNG, SVG is more efficient
+you have to move around manually. Might need to do the image in layers, like trees first, then shrubs, and keep working around until all done.
+
+jinja2 for templating? https://fastapi.tiangolo.com/advanced/templates/
+ use NGINX cache to cache the generated SVG files (compress/minify them first anyway) https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/
+
+switch docs to doctave
+
 ### Phase 3:
 
 - Able to connect to database
@@ -115,3 +123,18 @@ Write the documentation and text on the website from a gardeners perspective, no
 - Label the circles underneath with an ID number, then have a key at the side that says the plant name and a link to a page which describes all aspects about that plant.
 - Wont do - Seaweed app like vertical ocean farming. This can be done later or as a second app.
 
+
+## Image generation notes
+
+Take pycairo context object and pass to other functions. They individually apply their changes to the context in turn for the different things, so its like applying layers to the picture. Iterate over canopy layer, shrub layer etc.
+
+Then the final result can be the returned context.
+
+
+The order of the drawing is important. Later drawings appear on top of earlier drawings
+
+
+Can draw lines for borders of plants, but what about symbols for denoting trees and plants? 
+Circles and rectangles? different colours? Tree wavy line shape?
+Maybe basic initially to get the placements correct, then have prebuilt SVG bits for tree shapes? Use fractals or spirals or something to generate them?
+I need this to look professional.

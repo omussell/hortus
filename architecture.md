@@ -1,4 +1,0 @@
-- Go program to generate forest garden layout
-- A Go backend serves an API with which input parameters for the layout are given, the layout generated and the images are returned
-- The PostgreSQL database, in which the plant information is stored
-- The Svelte / Typescript / Tailwind CSS frontend on which the returned images are displayed, and initial input parameters can be entered
