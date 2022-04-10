@@ -11,18 +11,11 @@ Maybe just coordinates and data to start with, not an actual image
 ## Tech stack: 
 
 - Frontend: 
-    - Svelte
-    - Typescript
-    - Tailwind CSS 
-        - or
     - generated from backend
 - Backend:
-    - Go
-    - sqlc + pgx
-        - or
     - FastAPI
     - SQLModel
-    - Celery + Redis
+    - Arq + Redis
 - Database:
     - Postgresql
 
