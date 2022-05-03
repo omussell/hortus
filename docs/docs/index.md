@@ -1,3 +1,12 @@
+Maybe instead of web app and all this, use zig + tinyvg and create a cli app. The image can be made into png and opened. `hortus -w 30 -l 50`
+
+Then web app can be whatever and just pass URL params to shell call.
+
+Dont know how to handle the plant info. Maybe just flat file? JSON? DB access wouldnt be available easily.
+
+At worst, the zig app could pregenerate all the combinations of images and store them for a web app to serve.
+
+
 # Tool to generate forest garden designs
 
 Desired end goal is to have a web app which lets you select certain parameters, then when you click generate, it returns the layout for a forest garden according to your parameters.
